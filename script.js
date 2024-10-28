@@ -4,7 +4,7 @@ const symbols = ['🍎', '🍌', '🍇', '🍓', '🍍', '🍉', '🍒', '🥝']
 let cardsLeft = symbols.length
 
 //keeps score
-let bestScore = 0
+let bestScore = Number.MAX_SAFE_INTEGER
 let currScore = 0
 
 // These will be used when the user starts choosing cards
@@ -140,8 +140,9 @@ function shuffleArray(array) {
 function endGame(){
     bestScore = Math.min(bestScore, currScore)
     document.getElementById('best-score').textContent = "Best Score: " + bestScore
-    document.getElementById('win-header').className = "won"
-    document.getElementById("win-header").textContent = "YOU WON!"
+    document.getElementById('win-header').textContent = "YOU WON!"
+    document.getElementById('win-header').classList.add("won")
+    document.getElementById('game-board').innerHTML = "Score: " + currScore
 }
 
 initGame();

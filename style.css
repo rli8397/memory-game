@@ -1,5 +1,4 @@
 body {
-    
     height: 100vh;
     background-color: #121212;
     color: white;
@@ -40,7 +39,7 @@ body {
 }
 
 .card.matched {
-    background-color: #6aaa64; /* Green */
+    background-color: #6aaa64; 
     cursor: default;
     pointer-events: none;
 }
